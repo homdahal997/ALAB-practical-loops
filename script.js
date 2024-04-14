@@ -33,11 +33,11 @@ Continuing with the example above, if n is equal to 4, your loop should log 5. S
 Be careful! If you set n to a number too large, your loop could take a long time to process.
  */
 // let our arbitary number be 15.
-let n = 15;
+let n = 301;
 // let our next prime number be i. we start with n+1 because we are looking for prime number after n, in the case n is already a prime number.
 for (let i = n + 1; ; i++) {
     let isPrime = true // let us suppose that number is prime.
-    // as all number are obviously divisible by 1 , we start looping from 2 as long as j < i or until i-1.
+    // as all number are obviously divisible by 1 , we start looping from 2 as long as j < i.
     for (let j = 2; j < i; j++) {
         // if i is divisible by j , it's not prime
         if (i % j === 0) {
@@ -68,7 +68,7 @@ for (let i = 0; i < rows.length; i++) {
     let cells = row.split(",");
     //console.log(cells)
     //console.log(typeof cells);
-    
+
     // Now we can easily get data from each cell 
     let cell1 = cells[0];
     let cell2 = cells[1];
