@@ -52,3 +52,29 @@ for (let i = n + 1; ; i++) {
         break; // as soon as we find the next prime number, we break, else it goes to infinite loop.
     }
 }
+
+console.log("========================== Part 3: Feeling Loopy ===================================")
+
+let providedCsvString = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+
+// Let us start by splitting given string into rows
+let rows = providedCsvString.split("\n");
+
+// Now loop through each row
+for (let i = 0; i < rows.length; i++) {
+    let row = rows[i];
+    //console.log(row);
+    // Now let's split row into cells using comma separator.
+    let cells = row.split(",");
+    //console.log(cells)
+    //console.log(typeof cells);
+    
+    // Now we can easily get data from each cell 
+    let cell1 = cells[0];
+    let cell2 = cells[1];
+    let cell3 = cells[2];
+    let cell4 = cells[3];
+
+    // log each row of data
+    console.log(cell1, cell2, cell3, cell4)
+}
